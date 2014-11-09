@@ -1,1 +1,1 @@
-web: gunicorn -b localhost:5000 --log-file=- main:app
+web: gunicorn --log-file=- main:app
