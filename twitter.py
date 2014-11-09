@@ -9,7 +9,7 @@ try:
     import urllib.parse
     quote = urllib.parse.quote
 except ImportError:
-    import urlib
+    import urllib
     quote = urllib.quote
 
 TWITTER_KEY    = os.environ["TWITTER_KEY"]
