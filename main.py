@@ -139,6 +139,10 @@ def favlogout():
     session.pop("fav/access_secret", None)
     return redirect("/fav")
 
+@app.route("/static/<path:path>")
+def static_route(path):
+    return app.send_static_file(os.path.join("static", path))
+
 @app.route("/facts")
 def facts():
     facts = (
